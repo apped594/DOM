@@ -1,0 +1,45 @@
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    min-height: 100vh;
+}
+
+.oupa{
+    padding: 30px;
+    gap:10px;
+    display: flex;
+    background-color: rgb(226, 43, 217);
+
+}
+.Tier1{
+
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tier2{
+
+    width:60%;
+    height: 60%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tier3{
+    width: 60%;
+    height: 60%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

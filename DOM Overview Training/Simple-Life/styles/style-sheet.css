@@ -1,0 +1,361 @@
+/*---------------------------Generic----------------------------*/
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #707070;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2 {
+    margin:0;
+}
+
+/*---------------------------Typography----------------------------*/
+
+h1{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #143774;
+}
+
+p{
+    line-height: 1.5em;
+}
+
+a{
+    color: #1792D2;
+}
+
+a:hover, a:focus{
+    color:#143774;
+}
+
+hr {
+    color:#ececec;
+    font-weight: 200;
+    margin:1em 0;
+}
+
+.emphasise{
+
+    color: #707070;
+    font-weight: 700;
+}
+
+.sub-title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: .75rem;
+    color:#1792d2;
+    margin:0;
+}
+
+.foot-note{
+
+    font-family: 'Segoe UI';
+    font-size: 0.875rem;
+    font-weight: 200;
+
+}
+
+.about-subtitle{
+
+    color:#1792D2;
+    font-family: 'lora';
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+/*-------------------------Layout Utilities------------------------------*/
+
+
+.container{
+
+    margin: 0 auto;
+    width: 90%;
+    max-width:1000px;  
+}
+
+/*---------------------------Navigation----------------------------*/
+
+header{
+    background-color: #f0ebeb63;
+    padding: 1.5em 0;
+    margin-bottom: 2.5em;
+}
+
+.container-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.navigation{
+    text-align: center;  
+}
+
+.nav-list{
+    
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    padding:0;
+    margin:0;  
+}
+
+.nav-link{
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color:#707070;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:.25em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover, .nav-link:focus {
+
+    color:#143774;
+}
+
+.nav-link:active {
+
+    text-decoration: underline;
+}
+
+.current-page{
+
+    border-bottom: 1px solid #707070;
+    
+}
+
+.current-page:hover{
+color: #707070;
+}
+
+/*---------------------------Article----------------------------*/
+
+.article{
+    margin-bottom: 1.5em;
+}
+
+.article-title, .about-title-main{
+
+    font-family: 'lora';
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #143774;
+    
+}
+
+.continue-reading-link{
+
+    text-decoration: none;
+    color: #1792D2;
+    font-weight:700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+       
+}
+
+/*---------------------------Side-Bar----------------------------*/
+
+.about-me-side-bar-section{
+
+    background-color:#EBEBEB;
+    padding:1em;
+    margin:2em 0;
+}
+
+.about-me-card{
+
+    background-color: #ffff;
+    padding: 1.2em .9em;
+
+}
+
+.side-bar-text{
+
+    color:#143774;
+    
+}
+
+
+.side-bar-titles{
+
+    color:#143774;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    letter-spacing: 1.5px;
+}
+
+
+.recent-posts-side-bar-section{
+
+    background-color:#EBEBEB;
+    padding:1em;
+    margin:2em 0;
+}
+
+
+.recent-posts-card{
+
+    background-color: #ffff;
+    padding: 1.2em .9em;
+}
+
+
+.recent-post-side-bar-title{
+
+    color: #143774;
+    font-size: 0.875rem;
+    font-family: 'lora';
+    font-weight: 200;
+
+}
+
+/*---------------------------Footer----------------------------*/
+
+footer{
+    text-align: center;
+    background-color: #143774;
+    padding: 1.5em 0;
+    color: #ffffffa6;
+}
+
+.copyright{
+    font-weight: 200;
+}
+
+/*---------------------------Other----------------------------*/
+
+.img-about-me-main{
+
+    margin-bottom: 1em;
+    object-fit:cover;
+    max-height: 41%;
+    width: 100%;
+    object-position:top;
+}
+
+/*---------------------------Desktop Media Queries----------------------------*/
+
+@media (min-width:600px) {
+
+    .nav-list{
+
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+        
+    }    
+}
+
+
+@media (min-width:800px) {
+
+    .container-nav{
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navigation{
+        display: flex;
+        align-items: center;
+        
+    }
+
+
+    .wrapper{
+        
+        display: flex;
+        justify-content:space-between;
+        
+    }
+
+    .articles-container{
+
+        width: 65%;
+    }
+
+    .sidebar{
+
+        width:25%;
+    }
+
+   
+    .article{
+
+        display: flex;
+        gap:1.5em;
+        margin-bottom: 4em;
+    }
+    .img-article--normal{
+
+        object-fit:cover;
+        width:100%;
+        height: 100%;
+        
+    }
+
+    .img-article--center{
+        object-position: left;
+    }
+
+    .about-me-side-bar-section{
+
+        margin-top:0;  
+    
+    }
+
+    .recent-posts-side-bar-section{
+
+        margin-top:0;
+    }
+
+    .article-section-one{
+
+        width:70%;
+    }
+
+    .article-section-two{
+
+        width:100%;
+    }
+    
+    .about-section{
+
+        width:65%;
+
+    }
+
+    .logo{
+        text-align: left;
+    }
+
+}
+
+
