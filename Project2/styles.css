@@ -183,19 +183,54 @@ h2{
     padding: 1em 1em 2em 1em;
     display: grid;
     justify-self: center;
-    grid-template: 1fr auto auto auto auto 1fr / auto;
+    grid-template: 1fr auto auto auto auto auto 1fr / auto;
     grid-template-areas: 
         '..'
         'vloek-page-title'
         'wie-my-gevloek'
         'fokit'
         'vloek-my-weer'
+        'stop-dit'
         '..'
     
     ;
+    background-color: #FFFFFF;
+    position: fixed;
+    width:100%;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:100%; /* dit move hom basies regs van die skerm af*/
+    transform: translateX(0);
+    transition: .5s;
+    
+}
 
-    display: none;
+.vloek-deel-open{
+    transform: translateX(-100%);
+}
 
+.stop-dit{
+
+    display: inline-block;
+    background-color:#FF713B;
+    background-image: linear-gradient(to right,#FFA51D, #FF713B );
+    color: #FFFFFF;
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1px;
+    padding: 1.15em;  
+    border-radius: 8px;
+    border:0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: color, transform 250ms;
+    width: 100%;
+    max-width:300px;
+    justify-self: center;
+    grid-area: stop-dit;
 }
 
 @media (min-width:400px) {
@@ -239,13 +274,14 @@ h2{
 
 .vloek-deel{
 
-    grid-template: 1fr auto auto auto auto auto 1fr / 1fr minmax(auto, 500px) 1fr;
+    grid-template: 1fr auto auto auto auto auto auto 1fr / 1fr minmax(auto, 500px) 1fr;
     grid-template-areas:
     ".. .. .."
     ".. vloek-page-title .."
     ".. wie-my-gevloek .."
     ".. fokit .."
     ".. vloek-my-weer.."
+    'stop-dit'
     ".. .. .."
     ;
 
