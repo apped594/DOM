@@ -63,24 +63,36 @@ h2{
 }
 
 
-.vloek-my-link{
-    text-decoration: none;
-    color:#F18119;
-    font-size:1.3125rem;
+.laat-gevloek-word{
+
+    grid-area: laat-gevloek-word;
+    display: inline-block;
+    background-color:#FF713B;
+    background-image: linear-gradient(to right,#FFA51D, #FF713B );
+    color: #FFFFFF;
+    font-size: 0.625rem;
     font-weight: 900;
     text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 1px;
-    grid-area: hero-call-to-action;
-    align-self: end;
-            
+    padding: 1.15em;  
+    border-radius: 8px;
+    border:0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: color, transform 250ms;
+    width: 100%;
+    max-width:300px;
+    justify-self: center;
 }
 
-.vloek-my-link:hover,
-.vloek-my-link:focus {
-
-    color: #c2c0c0;
-    text-decoration: underline;
+.laat-gevloek-word:hover{
+    color:#818181;
+    background-image: linear-gradient(to left,#FFA51D, #FF713B );
+    transform: scale(1.1);
 }
+
+
 
 .vloek-page-title{
 
@@ -134,7 +146,6 @@ h2{
     justify-self: center;
     grid-area: vloek-my-weer;
     
-
 }
 
 .vloek-my-weer:hover
@@ -171,7 +182,7 @@ h2{
      ".."
      "hero-title"
      ".."
-     "hero-call-to-action"
+     "laat-gevloek-word"
     ;
 
 }
@@ -233,6 +244,13 @@ h2{
     grid-area: stop-dit;
 }
 
+.stop-dit:hover{
+
+    color:#818181;
+    background-image: linear-gradient(to left,#FFA51D, #FF713B );
+    transform: scale(1.1);
+}
+
 @media (min-width:400px) {
 
     h1{
@@ -266,7 +284,7 @@ h2{
      ".. .. .."
      ".. hero-title .."
      ".. .. .."
-     ".. hero-call-to-action .."
+     ".. laat-gevloek-word .."
     ;
     width: 100%;
 
@@ -294,13 +312,7 @@ h2{
     cursor:not-allowed;
 }
 
-.vloek-my-link:hover,
-.vloek-my-link:focus {
 
-    color: #F18119;
-    text-decoration: none;
-
-} 
 
 .vloek-deel{
     padding: 0 1em;
