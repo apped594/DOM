@@ -224,8 +224,8 @@ h2{
 .stop-dit{
 
     display: inline-block;
-    background-color:#FF713B;
-    background-image: linear-gradient(to right,#FFA51D, #FF713B );
+    background-color:#41ff3b;
+    background-image: linear-gradient(to right,#1d6cff, #ff3be5 );
     color: #FFFFFF;
     font-size: 0.625rem;
     font-weight: 900;
@@ -242,6 +242,7 @@ h2{
     max-width:300px;
     justify-self: center;
     grid-area: stop-dit;
+    margin-top: 3px;
 }
 
 .stop-dit:hover{
@@ -276,6 +277,7 @@ h2{
     
         
     }
+
 .splash {
     
     grid-template: auto 1fr auto  1fr auto 2em / 1fr minmax(auto, 800px) 1fr;
@@ -299,7 +301,7 @@ h2{
     ".. wie-my-gevloek .."
     ".. fokit .."
     ".. vloek-my-weer.."
-    'stop-dit'
+    '.. stop-dit ..'
     ".. .. .."
     ;
 
