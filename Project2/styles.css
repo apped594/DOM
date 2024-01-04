@@ -1,0 +1,283 @@
+*,*::before,* ::after {
+
+    box-sizing: border-box;
+}
+
+body{
+
+    margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5a5a5aa2;
+}
+
+img{
+
+    max-width: 100%;
+}
+
+h1,h2,a{
+    
+    margin:0;
+ 
+}
+
+h1{
+    font-size: 2.25rem;
+    font-weight: 300;
+    color:#FFFFFF;
+}
+
+h2{
+    font-size: 1.3125rem;
+}
+
+.emphasis{
+    font-weight: 900;
+}
+
+.slogan{
+
+    padding-top: 2px;
+    color: #F18119;
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-top: 6px solid #F18119;
+    border-image: linear-gradient(to right,#FFA51D, #FF713B ) 1;
+    grid-area: slogan;
+    justify-self: center;
+    width:60%;
+    max-width: 500px;
+    
+}
+
+.hero-title{
+
+    grid-area: hero-title;
+    align-self: center;
+ 
+}
+
+
+.vloek-my-link{
+    text-decoration: none;
+    color:#F18119;
+    font-size:1.3125rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    grid-area: hero-call-to-action;
+    align-self: end;
+            
+}
+
+.vloek-my-link:hover,
+.vloek-my-link:focus {
+
+    color: #c2c0c0;
+    text-decoration: underline;
+}
+
+.vloek-page-title{
+
+    color: #404040;
+    grid-area: sign-up-title;
+    margin-bottom: 1.5em;
+
+    grid-area: vloek-page-title;
+
+}
+
+.wie-my-gevloek{
+
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #F18119;
+    letter-spacing: 1px;
+    margin:0;
+
+    grid-area: wie-my-gevloek;
+}
+
+.fokit{
+
+    grid-area: fokit;
+    margin-bottom: 2em;
+}
+
+
+
+.vloek-my-weer {
+
+    display: inline-block;
+    background-color:#FF713B;
+    background-image: linear-gradient(to right,#FFA51D, #FF713B );
+    color: #FFFFFF;
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1px;
+    padding: 1.15em;  
+    border-radius: 8px;
+    border:0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: color, transform 250ms;
+    width: 100%;
+    max-width:300px;
+    justify-self: center;
+    grid-area: vloek-my-weer;
+    
+
+}
+
+.vloek-my-weer:hover
+{
+    color:#818181;
+    background-image: linear-gradient(to left,#FFA51D, #FF713B );
+    transform: scale(1.1);
+}
+
+.wrapper{
+
+    display: grid;
+    grid-template: 100vh /auto; /* 1st rows dan columns*/
+    grid-template-areas:
+        'splash'
+    ;
+}
+
+.splash{
+    
+    background-image: url(img/ribs.jpg), linear-gradient(45deg,red,blue);
+    background-blend-mode: multiply;
+    background-size:cover;
+    background-position: center;
+    padding: 0 1em 2em 1em;
+    text-align: center;
+    grid-area: splash;
+    justify-self: center;
+    display: grid;
+
+    grid-template: auto 1fr auto  1fr auto 2em /auto;
+    grid-template-areas: 
+     "slogan"
+     ".."
+     "hero-title"
+     ".."
+     "hero-call-to-action"
+    ;
+
+}
+
+.vloek-deel{
+
+    text-align: center;
+    grid-area: vloek-deel;
+    padding: 1em 1em 2em 1em;
+    display: grid;
+    justify-self: center;
+    grid-template: 1fr auto auto auto auto 1fr / auto;
+    grid-template-areas: 
+        '..'
+        'vloek-page-title'
+        'wie-my-gevloek'
+        'fokit'
+        'vloek-my-weer'
+        '..'
+    
+    ;
+
+    display: none;
+
+}
+
+@media (min-width:400px) {
+
+    h1{
+        font-size: 3.5rem;
+    }
+    h2{
+        font-size: 1.75rem
+    }
+}
+
+@media (min-width:556px) {
+
+    body{
+            font-size: 1.125rem;
+    }
+    
+    .wrapper{
+    
+        grid-template: 100vh/auto;
+        grid-template-areas: 
+            "splash"
+        ;
+    
+        
+    }
+.splash {
+    
+    grid-template: auto 1fr auto  1fr auto 2em / 1fr minmax(auto, 800px) 1fr;
+    grid-template-areas: 
+     ".. slogan .."
+     ".. .. .."
+     ".. hero-title .."
+     ".. .. .."
+     ".. hero-call-to-action .."
+    ;
+    width: 100%;
+
+}
+
+.vloek-deel{
+
+    grid-template: 1fr auto auto auto auto auto 1fr / 1fr minmax(auto, 500px) 1fr;
+    grid-template-areas:
+    ".. .. .."
+    ".. vloek-page-title .."
+    ".. wie-my-gevloek .."
+    ".. fokit .."
+    ".. vloek-my-weer.."
+    ".. .. .."
+    ;
+
+    width: 100%;
+
+}
+
+.vloek-my-link{
+
+    cursor:not-allowed;
+}
+
+.vloek-my-link:hover,
+.vloek-my-link:focus {
+
+    color: #F18119;
+    text-decoration: none;
+
+} 
+
+.vloek-deel{
+    padding: 0 1em;
+}
+
+@media (min-width: 1000px) {
+
+    .wrapper{
+
+        grid-template: 100vh/auto;
+        grid-template-areas: 
+            "splash"
+        ;
+    }
+}
+}
