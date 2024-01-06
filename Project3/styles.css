@@ -42,7 +42,7 @@ h2{
     font-size: 1.3125rem;
 }
 
-.accordian{
+.accordion{
 
     border: 4px solid #db0e7f;
     padding:1em;
@@ -62,10 +62,8 @@ h2{
 .content-container{
 
     margin-bottom: 1em;
-    
     max-width: 500px;
-    background-color: #3bffad;
-    
+     
 }
 
 .question{
@@ -76,33 +74,54 @@ h2{
     color: #1fb2d6;
     letter-spacing: 1px;
     margin:0;
+    padding:.25em;
     border-bottom: 2px solid #d613b6;
     border-image: linear-gradient(to right,#db158f, #3b4fff ) 1;
-    position: relative;
-    background-color: #3b4fff;
+    position: relative;  /* do this so we can add the plus sign*/
+    
 }
 
 .question::after{
 
     content: "+";
     color: #db0e7f;
-    font-size: 1.25rem;
-    position: absolute;
-    right: 3px;
+    font-size: 1.75rem;
+    position: absolute; /*plus sign relative to the question position*/
+    right: 15px;
+    top:-7px;
 }
 
 .answer{
+    padding-top:.5em;
     height: 0px;
     overflow: hidden;
-    transition: .5s;
-    background-color: #1fb2d6;
-    
-};
+    transition:.5s;
+   
+}
 
-.accordian .content-container.active .answer{
+
+.accordion .content-container.active .answer{ /* this will rank higher becaus eof specificisity, the .content-container.active means that it needs to have both classes to that div before applying the style to .answer*/
     height: 150px;
+}
+
+.accordion .content-container.active .question::after{
+
+    content: "-";
+    transition: .5s;
+    font-size: 30px;
+ 
+}
+
+.accordion .content-container.active .question{
+    font-size: .75rem;
     
-};
+    border-bottom: 2px solid #d613b6;
+    border-image: linear-gradient(to right,#3b4fff, #db158f ) 1;
+    transition: .5s;
+}
+
+
+
 
 
 

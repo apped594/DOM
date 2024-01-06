@@ -1,12 +1,12 @@
-const accordian = document.querySelectorAll('.content-container');
+const accordion = document.querySelectorAll('.content-container');
 
 
-accordian.forEach(element => {
+accordion.forEach(element => {  // adds event listener to eeach item of the array
 
     element.addEventListener("click", e=>{
-        element.classList.toggle("active");
-     
-    })
+        element.classList.toggle("active"); //toggles the class on or off depending on the current state
+
+    });
     
 });
 
