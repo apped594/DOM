@@ -1,0 +1,71 @@
+*,*::before,* ::after {
+
+    box-sizing: border-box;
+}
+
+body{
+    
+    margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5a5a5aa2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/img/hero-bg.jpg),
+    linear-gradient(45deg,red, blue);
+    background-blend-mode:multiply;
+    background-size:cover;
+    background-position: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    aspect-ratio: 1/1;
+    margin: 0 3em;
+    background-color:#ffffff07;
+    padding: 5.45em 2em;
+    border-radius: 100%;
+    
+    width: 500px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+}
+
+.timer{
+    font-size: 5rem;
+    font-weight: 500;
+    color: #00afcee1;
+    display: flex;
+    justify-content: center;
+    
+    
+   
+}
+button{
+
+    margin: 0 3px;
+    color: rgba(200, 255, 0, 0.87);
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 3rem;
+    border: none;
+}
+
+#pause{
+    color: rgba(160, 0, 253, 0.808);
+
+}
+
+#stop{
+    color: rgba(219, 1, 110, 0.808);
+}
+
