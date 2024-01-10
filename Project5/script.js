@@ -3,11 +3,27 @@ const input = document.getElementById('item-input');
 
 
 addItem.addEventListener("click", e=>{
-    
     if (input.value === '') {
 
         alert("Please add value")
+    } else {
+        addtask();
+        console.log(e)
     }
+});
+
+
+input.addEventListener("keypress",e=>{
+    if(e.key === "Enter") {
+
+        addtask();
+    }
+})
+
+
+function addtask() {
+    
+   
 
     const itemContainer = document.createElement("div");
     itemContainer.classList.add("item-container");
@@ -50,4 +66,4 @@ addItem.addEventListener("click", e=>{
         deleteButton.parentElement.remove();
     })
 
-})
+}
