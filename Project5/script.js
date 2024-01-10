@@ -41,16 +41,13 @@ addItem.addEventListener("click", e=>{
 
     checkButton.addEventListener("click", e=>{
 
-        e.target.parentElement.previousElementSibling.style.textDecoration = "line-through";
+        checkButton.previousElementSibling.style.textDecoration = "line-through";
 
-    
+
     })
 
     deleteButton.addEventListener("click", e=>{
-        e.target.parentElement.parentElement.remove();
+        deleteButton.parentElement.remove();
     })
-
-
-
 
 })
