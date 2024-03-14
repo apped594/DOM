@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/9b1c591d09.js" crossorigin="anonymous"></script>
+
+    <title>To Do List</title>
+</head>
+
+
+<body>
+
+    <div class="global-container">
+
+        
+            <div class="add-new-task-container">
+
+                <input type="text" placeholder="Enter Braai Item" required class="item-input" id ="item-input">
+                <button id="add-item-button"  class="create-item-button">
+                    <i  class="fa-solid fa-plus" ></i>
+                </button>
+
+            </div>
+
+            <div class="items-container"  id="items-list">
+
+                
+            </div>
+
+    </div>
+
+    <div class="watch-wrapper" id="watch-wrapper">
+
+    <div class="watch-block">
+
+        <div class="timer" id="TIMER">
+            00:00:00
+        </div>
+
+        <div class="buttons">
+
+            <button id="startStopBtn">
+                <i class="fa-solid fa-play" id="play"></i>
+            </button>
+                
+            <button id="stopBtn">
+                <i class="fa-solid fa-stop" id="stop"></i>
+            </button>
+
+            <button id="submit-time-Btn">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </button>
+
+        </div>
+       
+
+    </div>
+
+    
+
+    <button class="close-watch" id="close-watch">
+        <i class="fa-regular fa-circle-xmark"></i>
+    </button>
+   
+
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
